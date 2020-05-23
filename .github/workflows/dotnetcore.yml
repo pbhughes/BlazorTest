@@ -18,8 +18,8 @@ jobs:
       with:
         dotnet-version: 3.1.300
     - name: Install dependencies
-      run: dotnet restore BlazorTest/BlazorTest/BlazorTest.csproj
+      run: dotnet restore BlazorTest/BlazorTest.csproj
     - name: Build
-      run: dotnet build BlazorTest/BlazorTest/BlazorTest.csproj --configuration Release --no-restore
+      run: dotnet build BlazorTest/BlazorTest.csproj --configuration Release --no-restore
     - name: Test
-      run: dotnet test BlazorTest/BlazorTest/BlazorTest.csproj --no-restore --verbosity normal
+      run: dotnet test BlazorTest/BlazorTest.csproj --no-restore --verbosity normal
