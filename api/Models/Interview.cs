@@ -14,17 +14,17 @@ namespace api.Models
         public Interviewee Interviewee { get; set; }
 
         [Required]
-        public ICollection<Interviewer> Interviewers { get; set; }
-
-        [Required]
         public DateTime StartTime { get; set; }
 
         public DateTime EndTime { get; set; }
 
-        public ICollection<Question> Questions { get; set; }
-
         [Range(0, 10)]
         public int Rating { get; set; }
+
+        [Required]
+        public ICollection<InterviewQuestions> Questions { get; set; }
+
+        public ICollection<InterviewAndInterviewees> Interviewers { get; set; }
 
     }
 }
